@@ -1,11 +1,13 @@
-import { Phone, Calendar } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { contactInfo } from '@/data/contact';
+import Formation from './Formation';
 
 export default function Hero() {
   return (
     <div className="relative bg-linear-to-br from-primary-50 to-white">
-      <div className="container-custom py-20 md:py-28">
+      <div className="flex flex-col lg:flex-row items-center lg:items-center lg:justify-between container-custom py-16 md:py-24 gap-12 lg:gap-24">
+
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Cabinet dentaire du
@@ -45,6 +47,9 @@ export default function Hero() {
             </p>
           </div>
         </div>
+
+        <Formation />
+
       </div>
     </div>
   );
