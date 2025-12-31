@@ -21,19 +21,14 @@ export default function Formation() {
                 </figure>
 
                 <ul className="text-sm text-gray-600 space-y-2 text-left">
-                    <li>
-                        2013 - Université Claude Bernard Lyon 1 – Doctorat en chirurgie dentaire
-                    </li>
-                    <li>2021 - SFPIO Paris - Cursus Parodontologie & Implantologie</li>
-                    <li>
-                        2019 - Université de Strasbourg – DU Esthétique
-                    </li>
-                    <li>2018 - SAPO Clinique - Formation Parodontologie</li>
+                    <li>2013 - Université Claude Bernard Lyon 1 – Doctorat en chirurgie dentaire</li>
+                    <li>2016 - Université Jean Monnet Saint-Étienne – DU d&apos;anatomie appliquée à l&apos;implantologie</li>
                     <li>2017 - SAPO Clinique - Formation Chirurgie & prothèse sur implant</li>
-                    <li>
-                        2016 - Université Jean Monnet Saint-Étienne – DU d&apos;anatomie appliquée à
-                        l&apos;implantologie
-                    </li>
+                    <li>2018 - SAPO Clinique - Formation Parodontologie</li>
+                    <li>2019 - Université de Strasbourg – DU Esthétique</li>
+                    <li>2021 - SFPIO Paris - Cursus Parodontologie & Implantologie</li>
+                    
+                    
                 </ul>
             </div>
         </div>

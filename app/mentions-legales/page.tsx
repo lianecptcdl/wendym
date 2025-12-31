@@ -5,7 +5,7 @@ import { contactInfo } from '@/data/contact';
 
 export const metadata: Metadata = {
   title: 'Mentions légales - Cabinet dentaire Dr MEZGUELDI',
-  description: 'Mentions légales du cabinet dentaire Dr MEZGUELDI à Figeac',
+  description: 'Mentions légales du cabinet dentaire Dr MEZGUELDI à Genas',
 };
 
 export default function MentionsLegalesPage() {

@@ -44,9 +44,8 @@ export default function ParkingInfo() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">Adresse exacte</h3>
             <p className="text-gray-600 text-sm">
-              {/* À compléter avec l'adresse complète */}
-              Adresse complète à venir<br />
-              Figeac, Occitanie
+              54 Rue de la République<br />
+              69740 Genas
             </p>
           </div>
         </div>

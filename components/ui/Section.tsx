@@ -4,7 +4,7 @@ interface SectionProps {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
-  background?: 'white' | 'gray';
+  background?: 'white' | 'blue' | 'transparent' | 'custom';
   id?: string;
 }
 
@@ -15,7 +15,7 @@ export default function Section({
   background = 'white',
   id
 }: SectionProps) {
-  const bgClasses = background === 'gray' ? 'bg-gray-50' : 'bg-white';
+  const bgClasses = background === 'blue' ? 'bg-teal-800' : background === 'transparent' ? '' : 'bg-white';
   
   return (
     <section id={id} className={`section-padding ${bgClasses} ${className}`}>

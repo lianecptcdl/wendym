@@ -4,13 +4,12 @@ export const contactInfo = {
   siret: "882 014 913 00017",
   phone: "04 78 40 14 88",
   address: {
-    street: "", // À compléter
-    city: "Figeac",
-    postalCode: "", // À compléter
-    department: "Lot",
-    region: "Occitanie"
+    street: "54 Rue de la République", 
+    city: "Genas",
+    postalCode: "69740",
+    region: "Auvergne-Rhône-Alpes"
   },
-  email: "", // À compléter si nécessaire
+  email: "",
   
   // Horaires spéciaux
   openingHours: {
@@ -51,8 +50,10 @@ export const contactInfo = {
   
   parking: {
     // À compléter avec les informations d'accès et parking
-    info: "Informations de stationnement à venir"
+    info: "Parking Regis à 500m - gratuit"
   },
-  
-  googleMapsLink: "" // À compléter
+  bus: {
+    info: "Arrêt Danton République à 80m"
+  },
+  googleMapsLink: "P2J2+M7 Genas" // À compléter
 };

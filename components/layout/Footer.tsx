@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-teal-950 text-gray-300">
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact */}
@@ -24,8 +24,9 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin size={18} className="mt-1 shrink-0" />
                 <div>
-                  <p>{contactInfo.address.city}</p>
-                  <p>{contactInfo.address.department}, {contactInfo.address.region}</p>
+                  <p>{contactInfo.address.street}</p>
+                  <p>{contactInfo.address.postalCode}, {contactInfo.address.city}</p>
+                  <p>{contactInfo.address.region}</p>
                 </div>
               </div>
             </div>

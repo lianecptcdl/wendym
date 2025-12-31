@@ -16,12 +16,12 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-teal-950/30 backdrop-blur shadow-sm sticky top-0 z-50">
       <nav className="container-custom">
         <div className="flex items-center justify-between h-20">
           {/* Logo / Nom du cabinet - À GAUCHE */}
           <div className="shrink-0">
-            <Link href="/" className="text-xl font-bold text-primary-600">
+            <Link href="/" className="text-xl font-bold text-white">
               Dr MEZGUELDI
             </Link>
           </div>
@@ -34,7 +34,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  className="text-white hover:text-primary-600 transition-colors font-medium"
                 >
                   {item.name}
                 </Link>
