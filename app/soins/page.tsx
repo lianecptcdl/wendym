@@ -16,18 +16,18 @@ export default function SoinsPage() {
   return (
     <>
       {/* Hero */}
-      <Section background="gray">
+      <Section background="blue">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Nos soins dentaires
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Une gamme complète de soins pour toute la famille, 
-            avec des technologies de pointe et une approche personnalisée
+          <p className="text-xl text-white mb-8">
+            Une gamme complète de soins pour toute la famille, avec des technologies de pointe et une approche personnalisée
           </p>
           <Button 
             href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
             size="lg"
+            variant="outline2"
           >
             <Phone size={20} className="mr-2" />
             Prendre rendez-vous
@@ -41,8 +41,8 @@ export default function SoinsPage() {
       </Section>
 
       {/* Information tarifs */}
-      <Section background="gray">
-        <Card className="max-w-4xl mx-auto">
+      <Section background="white" className='pt-0'>
+        <Card className="max-w-7xl mx-auto">
           <div className="flex items-start gap-4">
             <Info className="text-primary-600 shrink-0 mt-1" size={24} />
             <div>

@@ -8,7 +8,7 @@ import MobileMenu from './MobileMenu';
 const navigation = [
   { name: 'Accueil', href: '/' },
   { name: 'Soins', href: '/soins' },
-  { name: 'Orthodontie', href: '/orthodontie' },
+  { name: 'Pedodontie', href: '/pedodontie' },
   { name: 'Contact', href: '/contact' },
 ];
 

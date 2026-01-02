@@ -18,16 +18,23 @@ export default function MentionsLegalesPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Éditeur du site</h2>
           <div className="space-y-2 text-gray-600">
             <p><strong>Nom :</strong> {contactInfo.name}</p>
-            <p><strong>Forme juridique :</strong> {contactInfo.legalStatus}</p>
             <p><strong>SIRET :</strong> {contactInfo.siret}</p>
             <p><strong>Téléphone :</strong> {contactInfo.phone}</p>
-            <p><strong>Adresse :</strong> {contactInfo.address.city}, {contactInfo.address.department}</p>
+            <p><strong>Adresse :</strong> {contactInfo.address.street}, {contactInfo.address.city}, {contactInfo.address.postalCode}</p>
           </div>
         </Card>
 
         <Card className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Directeur de publication</h2>
           <p className="text-gray-600">Dr MEZGUELDI</p>
+        </Card>
+
+        <Card className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Conception et développement</h2>
+          <div className="space-y-2 text-gray-600">
+            <p>Site conçu et développé par LianeCC</p>
+            <a href="https://votre-site.com" className="text-primary-600 hover:underline">www.lianecc.com</a>
+          </div>
         </Card>
 
         <Card className="mb-6">

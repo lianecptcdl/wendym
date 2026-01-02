@@ -1,28 +1,14 @@
-import React from 'react';
 import Card from '@/components/ui/Card';
 import { Baby, Shield, Heart } from 'lucide-react';
 
-export default function OrthodontieContent() {
+export default function PedodontieContent() {
   return (
     <div className="space-y-8">
-      {/* Introduction */}
-      <Card>
-        <div className="prose max-w-none">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Pédodontie : Soins dentaires pour enfants
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-            Le cabinet propose des soins pédodontiques spécialisés chaque mercredi 
-            des semaines impaires. La pédodontie est la discipline qui s&apos;occupe des 
-            soins dentaires des enfants, de la naissance à l&apos;adolescence.
-          </p>
-        </div>
-      </Card>
-
+      
       {/* Approche */}
       <div className="grid md:grid-cols-3 gap-6">
-        <Card>
-          <Baby className="text-primary-600 mb-4" size={32} />
+        <Card className="text-center">
+          <Baby className="text-primary-600 mb-4 mx-auto" size={32} />
           <h3 className="font-bold text-gray-900 mb-2">Approche adaptée</h3>
           <p className="text-sm text-gray-600">
             Une approche douce et rassurante pour mettre votre enfant en confiance 
@@ -30,8 +16,8 @@ export default function OrthodontieContent() {
           </p>
         </Card>
 
-        <Card>
-          <Shield className="text-primary-600 mb-4" size={32} />
+        <Card className="text-center">
+          <Shield className="text-primary-600 mb-4 mx-auto" size={32} />
           <h3 className="font-bold text-gray-900 mb-2">Prévention</h3>
           <p className="text-sm text-gray-600">
             Bilans bucco-dentaires, vernis fluorés, scellements de sillons et 
@@ -39,8 +25,8 @@ export default function OrthodontieContent() {
           </p>
         </Card>
 
-        <Card>
-          <Heart className="text-primary-600 mb-4" size={32} />
+        <Card className="text-center">
+          <Heart className="text-primary-600 mb-4 mx-auto" size={32} />
           <h3 className="font-bold text-gray-900 mb-2">Confort</h3>
           <p className="text-sm text-gray-600">
             Possibilité de soins sous sédation consciente (MEOPA) pour plus de 

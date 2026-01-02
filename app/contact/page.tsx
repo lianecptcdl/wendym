@@ -3,6 +3,9 @@ import Section from '@/components/ui/Section';
 import OpeningHours from '@/components/contact/OpeningHours';
 import ParkingInfo from '@/components/contact/ParkingInfo';
 import Map from '@/components/contact/Map';
+import Button from '@/components/ui/Button';
+import { Phone } from 'lucide-react';
+import { contactInfo } from '@/data/contact';
 
 export const metadata: Metadata = {
   title: 'Contact - Cabinet dentaire Dr MEZGUELDI',
@@ -19,6 +22,16 @@ export default function ContactPage() {
             Contact
           </h1>
           <p className="text-xl text-white">Prise de rendez-vous uniquement par téléphone.</p> 
+        
+          <Button
+              href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
+              size="lg"
+              variant="outline2"
+              className='mt-6'
+            >
+              <Phone size={20} className="mr-2" />
+              {contactInfo.phone}
+          </Button>
         </div>
       </Section>
 

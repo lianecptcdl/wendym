@@ -1,6 +1,6 @@
 import Hero from '@/components/home/Hero';
 import AboutDoctor from '@/components/home/AboutDoctor';
-import FAQ from '@/components/orthodontie/FAQ';
+import FAQ from '@/components/pedodontie/FAQ';
 
 export default function Home() {
   return (
