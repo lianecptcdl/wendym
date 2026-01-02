@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { faqItems } from '@/data/faq';
 
 export default function FAQ() {
@@ -20,23 +20,30 @@ export default function FAQ() {
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+            className="w-full px-6 py-4 text-left flex items-center justify-between"
           >
             <span className="font-semibold text-gray-900 pr-4">
               {item.question}
             </span>
-            {openIndex === index ? (
-              <ChevronUp className="text-primary-600 shrink-0" size={20} />
-            ) : (
-              <ChevronDown className="text-gray-400 shrink-0" size={20} />
-            )}
+            <ChevronDown 
+              className={`shrink-0 transition-all duration-400 ease-in-out ${
+                openIndex === index 
+                  ? 'rotate-180 text-primary-600' 
+                  : 'rotate-0 text-gray-400'
+              }`}
+              size={20} 
+            />
           </button>
           
-          {openIndex === index && (
+          <div 
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+            }`}
+          >
             <div className="px-6 pb-4 text-gray-600">
               {item.answer}
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>

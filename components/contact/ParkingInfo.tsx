@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '@/components/ui/Card';
 import { Car, Navigation, MapPin } from 'lucide-react';
+import { contactInfo } from '@/data/contact';
 
 export default function ParkingInfo() {
   return (
@@ -8,16 +9,15 @@ export default function ParkingInfo() {
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Accès et parking</h2>
       
       <div className="space-y-6">
-        {/* À pied */}
+        {/* À pied / Transport en commun */}
         <div className="flex items-start gap-4">
           <div className="shrink-0 w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
             <Navigation className="text-primary-600" size={20} />
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-2">À pied</h3>
-            <p className="text-gray-600 text-sm">
-              {/* À compléter avec les vraies informations */}
-              Informations d&apos;accès à pied à venir
+            <h3 className="font-semibold text-gray-900 mb-2">Transport en commun</h3>
+            <p className="text-gray-600 text-ms">
+              {contactInfo.bus.info}
             </p>
           </div>
         </div>
@@ -29,9 +29,8 @@ export default function ParkingInfo() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">En voiture</h3>
-            <p className="text-gray-600 text-sm">
-              {/* À compléter avec les vraies informations */}
-              Informations de stationnement à venir
+            <p className="text-gray-600 text-ms">
+              {contactInfo.parking.info}
             </p>
           </div>
         </div>
@@ -43,9 +42,10 @@ export default function ParkingInfo() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">Adresse exacte</h3>
-            <p className="text-gray-600 text-sm">
-              54 Rue de la République<br />
-              69740 Genas
+            <p className="text-gray-600 text-ms">
+              {contactInfo.address.street}<br />
+              {contactInfo.address.postalCode} {contactInfo.address.city}<br />
+              {contactInfo.address.region}
             </p>
           </div>
         </div>

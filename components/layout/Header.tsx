@@ -44,7 +44,7 @@ export default function Header() {
             {/* Bouton téléphone */}
             <a
               href="tel:0478401488"
-              className="flex items-center gap-2 bg-primary-600 text-black px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
+              className="flex items-center gap-2 bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors"
             >
               <Phone size={18} />
               <span className="font-medium">04 78 40 14 88</span>

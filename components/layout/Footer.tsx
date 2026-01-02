@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock, ExternalLink } from 'lucide-react';
 import { contactInfo } from '@/data/contact';
 
 export default function Footer() {
@@ -9,64 +9,59 @@ export default function Footer() {
   return (
     <footer className="bg-teal-950 text-gray-300">
       <div className="container-custom py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Contact */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4">Contact</h3>
-            <div className="space-y-3">
-              <a 
-                href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                <Phone size={18} />
-                <span>{contactInfo.phone}</span>
-              </a>
-              <div className="flex items-start gap-2">
-                <MapPin size={18} className="mt-1 shrink-0" />
-                <div>
-                  <p>{contactInfo.address.street}</p>
-                  <p>{contactInfo.address.postalCode}, {contactInfo.address.city}</p>
-                  <p>{contactInfo.address.region}</p>
-                </div>
-              </div>
+        {/* Informations en ligne */}
+        <div className="flex flex-wrap items-start justify-center gap-x-12 gap-y-6 text-sm">
+          {/* Téléphone */}
+          <a 
+            href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
+            className="flex items-center gap-2 hover:text-white transition-colors"
+          >
+            <Phone size={18} />
+            <span>{contactInfo.phone}</span>
+          </a>
+
+          {/* Adresse */}
+          <div className="flex items-start gap-2">
+            <MapPin size={18} className="mt-1 shrink-0" />
+            <div>
+              <p>{contactInfo.address.street}</p>
+              <p>{contactInfo.address.postalCode} {contactInfo.address.city}</p>
             </div>
           </div>
+
+          {/* Google Maps */}
+          <a 
+            href={contactInfo.googleMapsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-white hover:text-teal-600 transition-colors"
+          >
+            <span>Voir sur Google Maps</span>
+            <ExternalLink size={14} />
+          </a>
 
           {/* Horaires */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4">Horaires</h3>
-            <div className="flex items-start gap-2">
-              <Clock size={18} className="mt-1 shrink-0" />
-              <div className="text-sm space-y-1">
-                <p>Lundi : 10h30-13h / 14h-18h30</p>
-                <p>Mar-Jeu : 9h-13h / 14h-19h</p>
-                <p className="text-xs text-gray-400">
-                  (Horaires variables mer/ven selon semaine)
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Liens légaux */}
-          <div>
-            <h3 className="text-white font-bold text-lg mb-4">Informations légales</h3>
-            <div className="space-y-2">
-              <Link 
-                href="/mentions-legales" 
-                className="block hover:text-white transition-colors"
-              >
-                Mentions légales
-              </Link>
-            </div>
-            <div className="mt-4 text-sm">
-              <p>SIRET : {contactInfo.siret}</p>
+          <div className="flex items-start gap-2">
+            <Clock size={18} className="mt-1 shrink-0" />
+            <div className="text-sm space-y-0.5">
+              <p>Lundi : 10h30-13h / 14h-18h30</p>
+              <p>Mar-Jeu : 9h-13h / 14h-19h</p>
+              <p className="text-xs text-gray-400">
+                (Mer/ven selon semaine)
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+        {/* Copyright et mentions légales */}
+        <div className="mt-12 text-center text-sm space-y-2">
           <p>&copy; {currentYear} {contactInfo.name}. Tous droits réservés.</p>
+          <Link 
+            href="/mentions-legales" 
+            className="inline-block hover:text-white transition-colors"
+          >
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>

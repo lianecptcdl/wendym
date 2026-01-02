@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Section from '@/components/ui/Section';
-import ContactInfo from '@/components/contact/ContactInfo';
 import OpeningHours from '@/components/contact/OpeningHours';
 import ParkingInfo from '@/components/contact/ParkingInfo';
 import Map from '@/components/contact/Map';
@@ -14,24 +13,17 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <Section background="gray">
+      <Section background="blue">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Contact
           </h1>
-          <p className="text-xl text-gray-600">
-            Prenez rendez-vous ou trouvez toutes les informations pour nous contacter
-          </p>
+          <p className="text-xl text-white">Prise de rendez-vous uniquement par téléphone.</p> 
         </div>
       </Section>
 
-      {/* Informations de contact */}
-      <Section>
-        <ContactInfo />
-      </Section>
-
       {/* Horaires */}
-      <Section background="gray">
+      <Section background="white">
         <div className="max-w-4xl mx-auto">
           <OpeningHours />
         </div>

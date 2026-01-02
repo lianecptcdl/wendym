@@ -49,11 +49,12 @@ export const contactInfo = {
   },
   
   parking: {
-    // À compléter avec les informations d'accès et parking
     info: "Parking Regis à 500m - gratuit"
   },
   bus: {
     info: "Arrêt Danton République à 80m"
   },
-  googleMapsLink: "P2J2+M7 Genas" // À compléter
+  
+  // Lien Google Maps simplifié
+  googleMapsLink: "https://maps.google.com/?q=54+Rue+de+la+République,+69740+Genas"
 };
